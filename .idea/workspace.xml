@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3955ee86-ffbb-4ca9-8fac-2b4c61afce18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Python_Course_Project/monkey_patch_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Course_Project/Python_Course_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Course_Project/Python_Course_Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python_Course_Project/Trythings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Course_Project/Trythings.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Course_Project/USDBRL_TickPrice_0510_0810.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Python_Course_Project/myfunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Course_Project/myfunc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Course_Project/myfunc2.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,14 +24,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+            <state relative-caret-position="153">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python_Course_Project/monkey_patch_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -45,14 +64,17 @@
       <list>
         <option value="$PROJECT_DIR$/Python_Course_Project/yelp.py" />
         <option value="$PROJECT_DIR$/Python_Course_Project/myfunc.py" />
+        <option value="$PROJECT_DIR$/Python_Course_Project/src/monkey_patch_example.py" />
+        <option value="$PROJECT_DIR$/Python_Course_Project/myfunc2.py" />
+        <option value="$PROJECT_DIR$/Python_Course_Project/monkey_patch_example.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="20" />
+    <option name="x" value="30" />
+    <option name="y" value="62" />
     <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -60,7 +82,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -73,14 +94,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="jdk.selected.PYTHON_MODULE" value="Python 3.6" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -89,6 +112,11 @@
       </console-settings>
     </option>
     <option name="myShowDebugConsoleByDefault" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\canze\IdeaProjects\FirstProject\Python_Course_Project" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.yelp">
+  <component name="RunManager" selected="Python tests.pytest in monkey_patch_example.py">
     <configuration name="myfunc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python_Course_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,8 +188,24 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in monkey_patch_example.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Python_Course_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python_Course_Project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Python_Course_Project/monkey_patch_example.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in monkey_patch_example.py" />
         <item itemvalue="Python.yelp" />
         <item itemvalue="Python.myfunc" />
       </list>
@@ -180,6 +224,32 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 30m 49s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 32m 26s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 32m 52s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 33m 20s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 33m 24s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 36m 37s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 36m 51s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_monkey_patch_example_py - 2019.04.02 at 16h 37m 07s.xml">
+      <configuration name="pytest in monkey_patch_example.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -190,10 +260,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="30" y="62" width="1346" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.22163388" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.23094867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -202,13 +271,13 @@
       <window_info id="Favorites" order="6" sideWeight="0.502439" side_tool="true" weight="0.21860817" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.299509" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3847487" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984448" weight="0.29734218" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4984448" visible="true" weight="0.358804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.5015552" side_tool="true" visible="true" weight="0.358804" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -245,6 +314,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/xlrd/__init__.py">
@@ -257,20 +340,30 @@
     <entry file="file://$PROJECT_DIR$/Python_Course_Project/Untitled.ipynb" />
     <entry file="file://$PROJECT_DIR$/Python_Course_Project/yelp.py" />
     <entry file="file://$PROJECT_DIR$/Python_Course_Project/Visualise.ipynb" />
-    <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/.ipynb_checkpoints/monkey_patch_example.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="10" lean-forward="true" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/monkey_patch_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>

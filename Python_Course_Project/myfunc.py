@@ -2,9 +2,11 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import datetime.datetime as
 from scipy.stats import norm
 
-def dataselector():
+def dataselector(dta, ):
+
     return
 
 
@@ -46,7 +48,9 @@ def hedging_pnl(s, tau, k, sigma, r, q):
     return optionPV, repl_port, total_port
 
 
-def hedging_pnl_delta_band:
+def hedging_pnl_delta_band( s, tau, k, sigma, r, q, bound ):
+
+
     return
 
 
