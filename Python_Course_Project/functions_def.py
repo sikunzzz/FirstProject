@@ -6,6 +6,7 @@ import datetime
 from scipy.stats import norm
 
 
+
 def daily_data_selector(dta, dates, start_date):
     return dta[np.logical_and(dates.month == start_date.month, dates.day == start_date.day)]
 
@@ -74,8 +75,8 @@ def hedging_pnl(s, tau, sigma,k, r, q):
 
 
 def hedging_pnl_delta_band( s, tau, sigma, k, r, q, bound, func ):
-    optionPV = func(s[:-1],tau[:-1],k,sigma[:-1],r,q)
-    delta_vec = delta(s[:-1], tau[:-1], k, sigma[:-1], r, q)
+    optionPV = option_price(s[:-1],tau[:-1],k,sigma[:-1],r,q)
+    delta_vec = func(s[:-1], tau[:-1], k, sigma[:-1], r, q)
 
     repl_port = np.array([])
     total_port = np.array([])
@@ -84,7 +85,7 @@ def hedging_pnl_delta_band( s, tau, sigma, k, r, q, bound, func ):
     repl_port[0] = optionPV[0]
     total_port[0] = 0
     bankacc[0] = optionPV[0] - s[0]*delta_vec[0]
-    delta_diff = np.diff(delta)
+    delta_diff = np.diff(delta_vec)
     cumulate_delta = 0
     time_stamp = 0
     stock_index =  0

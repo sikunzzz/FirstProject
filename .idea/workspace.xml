@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3955ee86-ffbb-4ca9-8fac-2b4c61afce18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Python_Course_Project/machinelearning_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Course_Project/class_def.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Course_Project/decoraters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Course_Project/.ipynb_checkpoints/Trythings-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Course_Project/.ipynb_checkpoints/Trythings-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python_Course_Project/Trythings.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Course_Project/Trythings.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Course_Project/myfunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Course_Project/myfunc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_Course_Project/myfunc.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,24 +25,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc.py">
+        <entry file="file://$PROJECT_DIR$/Python_Course_Project/class_def.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="423">
+              <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
               <folding>
-                <element signature="e#1#20#0" expanded="true" />
+                <element signature="e#2#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python_Course_Project/machinelearning_example.py">
+        <entry file="file://$PROJECT_DIR$/Python_Course_Project/functions_def.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="-546">
+              <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#1#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,6 +67,9 @@
         <option value="$PROJECT_DIR$/Python_Course_Project/monkey_patch_example.py" />
         <option value="$PROJECT_DIR$/Python_Course_Project/machinelearning_example.py" />
         <option value="$PROJECT_DIR$/Python_Course_Project/myfunc.py" />
+        <option value="$PROJECT_DIR$/Python_Course_Project/decoraters.py" />
+        <option value="$PROJECT_DIR$/Python_Course_Project/functions_def.py" />
+        <option value="$PROJECT_DIR$/Python_Course_Project/class_def.py" />
       </list>
     </option>
   </component>
@@ -306,14 +311,14 @@
       <window_info anchor="bottom" id="Pylint" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924356" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49319214" visible="true" weight="0.14075287" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49319214" weight="0.67266774" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4984448" weight="0.5880399" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50680786" side_tool="true" weight="0.60556465" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4969743" weight="0.3633388" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4969743" visible="true" weight="0.117839605" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -368,6 +373,17 @@
     <MESSAGE value="Pytest, monkeypatch example added" />
     <option name="LAST_COMMIT_MESSAGE" value="Pytest, monkeypatch example added" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Python_Course_Project/functions_def.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -398,6 +414,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="102" column="32" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Python_Course_Project/machinelearning_example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -408,12 +434,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python_Course_Project/myfunc.py">
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/decoraters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="357">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/functions_def.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-546">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python_Course_Project/class_def.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+          <folding>
+            <element signature="e#2#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
