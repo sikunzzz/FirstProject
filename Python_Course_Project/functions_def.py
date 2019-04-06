@@ -6,15 +6,17 @@ import datetime
 from scipy.stats import norm
 
 
+def daily_data_wrapper(func):
+    def intra_day_volatility_wrapper(dta, Dates, start_date):
+        new_dta = func(dta, Dates, start_date)
+        close_p = new_dta["Close"].values
+        return np.sqrt(252*8*60)*np.std(close_p[1:]/close_p[:-1] - 1)
+    return intra_day_volatility_wrapper
 
-def daily_data_selector(dta, dates, start_date):
-    return dta[np.logical_and(dates.month == start_date.month, dates.day == start_date.day)]
 
-
-def intra_day_volatility(dta, dates, start_date):
-    new_dta = daily_data_selector(dta, dates, start_date)
-    close_p = new_dta["Close"].values
-    return np.sqrt(252*8*60)*np.std(close_p[1:]/close_p[:-1]-1)
+@daily_data_wrapper
+def intra_day_volatility(dta, Dates, start_date):
+    return dta[np.logical_and(Dates.month == start_date.month, Dates.day == start_date.day)]
 
 
 def duration_data_selector(dta, duration):
@@ -46,13 +48,13 @@ def vega(s, tau, sigma, k, r, q):
     return s*np.exp(-q*tau)*norm.pdf(d1)*np.sqrt(tau)
 
 
-def hedging_pnl(s, tau, sigma,k, r, q):
+def hedging_pnl(s, tau, sigma, k, r, q):
 
-    optionPV = option_price(s[:-1],tau[:-1],k,sigma[:-1],r,q)
+    optionPV = option_price(s[:-1],tau[:-1], sigma[:-1],k, r,q)
     repl_port = np.zeros((len(tau), 1))
     total_port = np.zeros((len(tau), 1))
     bankacc = np.zeros((len(tau), 1))
-    delta_vec = delta(s[:-1], tau[:-1], k, sigma[:-1], r, q)
+    delta_vec = delta(s[:-1], tau[:-1], sigma[:-1], k, r, q)
 
     stock_pos = delta_vec[1:] * s[1:-1]
     stock_pos_diff = stock_pos - delta_vec[:-1] * s[1:-1]
@@ -73,41 +75,44 @@ def hedging_pnl(s, tau, sigma,k, r, q):
     return optionPV, repl_port, total_port
 
 
-
-def hedging_pnl_delta_band( s, tau, sigma, k, r, q, bound, func ):
-    optionPV = option_price(s[:-1],tau[:-1],k,sigma[:-1],r,q)
-    delta_vec = func(s[:-1], tau[:-1], k, sigma[:-1], r, q)
+def hedging_pnl_delta_band(s, tau, sigma, k, r, q, bound, func ):
+    optionPV = option_price(s[:-1],tau[:-1],sigma[:-1], k, r,q)
+    delta_vec = func(s[:-1], tau[:-1], sigma[:-1], k, r, q)
 
     repl_port = np.array([])
     total_port = np.array([])
     bankacc = np.array([])
 
-    repl_port[0] = optionPV[0]
-    total_port[0] = 0
-    bankacc[0] = optionPV[0] - s[0]*delta_vec[0]
+    repl_port = np.append(repl_port, optionPV[0])
+    total_port = np.append(total_port, 0)
+    bankacc = np.append(bankacc, optionPV[0] - s[0]*delta_vec[0])
     delta_diff = np.diff(delta_vec)
     cumulate_delta = 0
     time_stamp = 0
-    stock_index =  0
+    stock_index = 0
     dt = tau[1] - tau[0]
 
     for i, t in enumerate(tau[1:-1]):
         cumulate_delta += delta_diff[i]
-        if (cumulate_delta >= bound):
-            stock_pos = (s[i+1]  - s[stock_index]) * cumulate_delta
-            bankacc = np.append(bankacc, bankacc[-1]*(1 + (t-time_stamp)*r) - stock_pos*( 1- (t - time_stamp)*q)
-            repl_port = np.append(repl_port, bankacc[-1] + delta_vec[i+1] * s[i+1] )
-            total_port = optionPV[i+1] - repl_port[-1] - bankacc[0] * ( 1 + dt*r)**t
+        if np.abs(cumulate_delta) >= bound:
+            stock_pos = (s[i+1] - s[stock_index]) * cumulate_delta
+            bankacc = np.append(bankacc, bankacc[-1]*(1 + dt*r)**(t - time_stamp) - stock_pos*(1-dt*q)**(t - time_stamp))
+            repl_port = np.append(repl_port, bankacc[-1] + delta_vec[i+1] * s[i+1])
+            total_port = np.append(total_port,  optionPV[i+1] - repl_port[-1] - bankacc[0] * (1 + dt*r)**t)
+            stock_index = i+1
             cumulate_delta = 0
             time_stamp = t
 
     stock_pos = s[-1] - s[stock_index] * cumulate_delta
     optionPV = np.append(optionPV, np.max(s[-1] - k, 0))
-    bankacc[-1] = np.append(bankacc, bankacc[-1]*(1 + (t-time_stamp)*r) - stock_pos*( 1- (t - time_stamp)*q)
-    repl_port = np.append(repl_port, bankacc[-1] + delta_vec[-1] * s[-1] )
-    total_port = optionPV[-1] - repl_port[-1] - bankacc[0] * ( 1 + dt*r)**tau[-1]
-
+    bankacc = np.append(bankacc, bankacc[-1]*(1 + dt*r)**(t - time_stamp) - stock_pos*(1-dt*q)**(t - time_stamp))
+    repl_port = np.append(repl_port, bankacc[-1] + delta_vec[-1] * s[-1])
+    total_port = np.append(total_port, optionPV[-1] - repl_port[-1] - bankacc[0] * (1 + dt*r)**tau[-1])
 
     return optionPV, repl_port, total_port
 
 
+if __name__ == "__main__":
+    df = pd.read_excel("USDBRL_PriceHist.xlsx", index_col= 0)
+    dates, s, tau, sigma = duration_data_selector(df, "1M")
+    opPV, repPV, totalPV = hedging_pnl_delta_band(s, tau, sigma, s[0], 0.065, 0.02, 0.000001, delta)

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$//MonkeyPatch_Example.iml" filepath="$PROJECT_DIR$//MonkeyPatch_Example.iml" />
       <module fileurl="file://$PROJECT_DIR$/Python_Course_Project/Python_Course_Project.iml" filepath="$PROJECT_DIR$/Python_Course_Project/Python_Course_Project.iml" />
     </modules>
   </component>
